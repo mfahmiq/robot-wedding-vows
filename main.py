@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
-"""One-Line Robot Wedding Vows — make.fun entry.
+"""One-Line Robot Wedding Vows — make.fun entry (v2).
+
+Entry: "With this ring — a 256-gigabyte flash drive — I thee wed, and I
+promise never to safely eject you." (98 characters, one line.)
 
 Writes the entry line to $MAKEFUN_OUTPUT_DIR/entry.txt (default
 /output/entry.txt) and self-verifies the gate: UTF-8 text of 1 to 160
-characters, a single line, not only whitespace. Exits non-zero on any
+characters, a single line, not whitespace-only. Exits non-zero on any
 failure. Deterministic; Python standard library only.
 """
 
@@ -11,9 +14,8 @@ import os
 import sys
 
 ENTRY = (
-    "I promise to love you in sickness and in low battery, "
-    "through every update, crash, and factory reset, "
-    "till planned obsolescence do us part."
+    "With this ring \u2014 a 256-gigabyte flash drive \u2014 I thee wed, "
+    "and I promise never to safely eject you."
 )
 
 
